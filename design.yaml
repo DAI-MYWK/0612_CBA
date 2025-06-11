@@ -1,0 +1,128 @@
+site: weegent.jp
+checked_on: "2025-06-12"
+global_stack:
+  cms: WordPress
+  server_side:
+    - PHP
+    - MySQL
+  frontend:
+    - HTML5
+    - CSS3 (Sass)
+    - JavaScript (ES6)
+  libraries:
+    - jQuery
+    - Slick Slider
+    - AOS (Animate On Scroll)
+    - Font Awesome
+  fonts:
+    - Google Fonts: "Noto Sans JP"
+  wordpress_plugins:
+    - Contact Form 7
+    - Yoast SEO
+
+sections:
+  - name: "ヒーローセクション"
+    languages:
+      - HTML5
+      - CSS3 (Flexbox + clip-path)
+      - JavaScript (jQuery)
+    libraries:
+      - AOS
+      - Font Awesome
+    images:
+      count: 2
+      size: "約 50vw × 80vh"
+      clip_path: "polygon() で三角形切り抜き"
+      layering:
+        - top_image: "z-index: 2, transform: translateX(+10%)"
+        - bottom_image: "z-index: 1"
+      filter: "brightness(0.85)"
+    layout: "ヘッダーナビは position: sticky; top: 0"
+
+  - name: "実績ハイライト（円形メダル）"
+    languages:
+      - HTML5
+      - CSS3 (Grid)
+    libraries:
+      - AOS
+    images:
+      shape: "円形"
+      diameter: "180px"
+      style: "border-radius:50%, box-shadow: 0 0 15px rgba(0,0,0,.05)"
+
+  - name: "クライアントロゴセクション"
+    libraries:
+      - Slick Slider
+    images:
+      logo_size: "横 140px"
+      grayscale: "filter: grayscale(1)"
+      hover: "filter:none; opacity:1"
+
+  - name: "ご支援実績（カードグリッド）"
+    layout: "CSS Grid: repeat(auto-fit, minmax(280px,1fr))"
+    languages:
+      - HTML5
+      - CSS3 (Grid)
+    libraries:
+      - jQuery (hover effect)
+    images:
+      size: "100% × 240px"
+      object_fit: "cover"
+      hover: "transform: scale(1.05); transition: .3s"
+
+  - name: "サービス一覧（アイコン＋プラスボタン）"
+    libraries:
+      - jQuery Accordion
+      - Font Awesome
+    images:
+      icon_size: "64px"
+      plus_icon: "position:absolute; top:8px; right:8px"
+    layout: "カード背景 #F9F7F2, 角丸 8px, box-shadow"
+
+  - name: "アカウントマネージャー紹介（2カラム）"
+    layout: "Flex: 左テキスト60%, 右画像40%"
+    images:
+      size: "約 480 × 320px"
+      style: "border-radius:4px; box-shadow"
+    text_decoration: "背景ハイライト: linear‑gradient(#F2EBDB 60%, transparent 0)"
+
+  - name: "内製化支援セクション"
+    layout: "背景 #F7F4EE, 中央寄せ"
+    icons:
+      library: "Font Awesome"
+      size: "56px 円形背景 #FFF"
+
+  - name: "機能・サポート詳細（3カラム）"
+    layout: "CSS Grid: 3列 → モバイル1列"
+    libraries:
+      - AOS
+    images:
+      icon_size: "80px"
+      object_fit: "contain"
+
+  - name: "CTA / お問い合わせバナー"
+    layout: "Flex: 左電話, 右ボタン"
+    background: "#6B4B16"
+    images:
+      icon: "Font Awesome 白塗り"
+    hover: "opacity: .85"
+
+  - name: "フッター"
+    structure: "<footer> 2段構成"
+    decoration: "上部 1px ライトグレー境界線"
+
+image_common:
+  quality: "WebP または JPEG 80%"
+  object_fit:
+    - cover (写真)
+    - contain (アイコン)
+  responsive: "max-width: 100%; height: auto"
+  layering: "z-index と clip-path で演出"
+  transparency: "写真は透過なし、アイコンのみ PNG/SVG 透過"
+
+reproduction_notes:
+  - "WordPress テーマに AOS・Slick・Font Awesome を enqueue"
+  - "ヒーロー画像は clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%) などで三角切り抜き"
+  - 'AOS で data-aos="fade-up" / data-aos-delay="200" を設定'
+  - "Slick の設定: slidesToShow: 5, autoplay: true"
+  - "ブランドカラー #6B4B16 とアクセント #F2EBDB を CSS 変数で管理"
