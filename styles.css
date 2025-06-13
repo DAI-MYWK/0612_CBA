@@ -1339,22 +1339,16 @@ body {
 
 .ceo-badge-floating {
     position: absolute;
-    top: -20px;
-    right: -20px;
+    top: 20px;
+    right: 20px;
     background: var(--gradient-energy);
     color: white;
-    padding: 1rem 1.5rem;
-    border-radius: 30px;
-    font-weight: 900;
-    font-size: 1.1rem;
-    box-shadow: 0 10px 30px rgba(245, 101, 0, 0.4);
-    animation: ceoFloatBadge 4s ease-in-out infinite;
-    z-index: 3;
-}
-
-@keyframes ceoFloatBadge {
-    0%, 100% { transform: translateY(0px) rotate(15deg); }
-    50% { transform: translateY(-15px) rotate(12deg); }
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-soft);
+    z-index: 2;
 }
 
 .ceo-decorative-shapes {
