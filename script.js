@@ -459,12 +459,6 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.add("animate-in");
 
       // Add special effects for specific sections
-      if (entry.target.classList.contains("achievement-circle")) {
-        setTimeout(() => {
-          entry.target.style.animation = "achievementPulse 0.6s ease-out";
-        }, 200);
-      }
-
       if (entry.target.classList.contains("service-card")) {
         const delay =
           Array.from(entry.target.parentNode.children).indexOf(entry.target) *
@@ -479,9 +473,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements for enhanced animations
 document
-  .querySelectorAll(
-    ".achievement-circle, .service-card, .challenge-item, .result-card"
-  )
+  .querySelectorAll(".service-card, .challenge-item, .result-card")
   .forEach((el) => {
     observer.observe(el);
   });
@@ -489,11 +481,6 @@ document
 // Add enhanced animation styles
 const enhancedAnimationStyle = document.createElement("style");
 enhancedAnimationStyle.textContent = `
-    @keyframes achievementPulse {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-    }
-    
     @keyframes serviceCardIn {
         from {
             opacity: 0;
