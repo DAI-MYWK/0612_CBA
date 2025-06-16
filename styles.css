@@ -7,24 +7,26 @@
 
 :root {
     --primary-black: #000000;
-    --primary-gold: #FFD700;
-    --accent-gold: #FFEC8B;
-    --deep-black: #0A0A0A;
-    --light-black: #1A1A1A;
+    --primary-white: #FFFFFF;
+    --gold-accent: #8A6D00;
+    --light-gold: #BFA257;
+    --beige-bg: #F3F0E9;
+    --light-gray-bg: #F5F5F5;
+    --border-gray: #E0E0E0;
+    --text-black: #000000;
     --text-white: #FFFFFF;
-    --text-gold: #FFD700;
-    --shadow-soft: 0 10px 30px rgba(255, 215, 0, 0.2);
-    --shadow-medium: 0 20px 40px rgba(255, 215, 0, 0.3);
-    --gradient-primary: linear-gradient(135deg, var(--primary-black) 0%, var(--deep-black) 100%);
-    --gradient-accent: linear-gradient(135deg, var(--primary-gold) 0%, var(--accent-gold) 100%);
-    --gradient-energy: linear-gradient(135deg, var(--primary-gold) 0%, #FFC000 100%);
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 20px 40px rgba(0, 0, 0, 0.12);
+    --gradient-primary: linear-gradient(135deg, var(--primary-white) 0%, var(--beige-bg) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--gold-accent) 0%, var(--light-gold) 100%);
+    --gradient-energy: linear-gradient(135deg, var(--gold-accent) 0%, var(--light-gold) 100%);
 }
 
 body {
     font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.6;
-    color: var(--text-white);
-    background: var(--primary-black);
+    color: var(--text-black);
+    background: var(--primary-white);
     overflow-x: hidden;
 }
 
@@ -40,7 +42,7 @@ body {
     font-weight: 900;
     line-height: 1.2;
     margin-bottom: 2rem;
-    color: var(--text-white);
+    color: var(--text-black);
     text-align: center;
     position: relative;
 }
@@ -88,15 +90,15 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--primary-gold);
+    border-bottom: 1px solid var(--border-gray);
     z-index: 1000;
     transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
-    background: rgba(0, 0, 0, 0.98);
+    background: rgba(255, 255, 255, 0.98);
     box-shadow: var(--shadow-soft);
 }
 
@@ -126,7 +128,7 @@ body {
 .logo-sub {
     font-size: 1rem;
     font-weight: 500;
-    color: var(--primary-gold);
+    color: var(--gold-accent);
     opacity: 0.8;
 }
 
@@ -138,14 +140,14 @@ body {
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--text-white);
+    color: var(--text-black);
     font-weight: 500;
     position: relative;
     transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: var(--primary-gold);
+    color: var(--gold-accent);
 }
 
 .nav-menu a::after {
@@ -155,7 +157,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--primary-gold); color: var(--primary-black);
+    background: var(--gold-accent);
     transition: width 0.3s ease;
 }
 
@@ -173,7 +175,7 @@ body {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: var(--primary-gold); color: var(--primary-black);
+    background: var(--gold-accent);
     border-radius: 0;
     transition: all 0.3s ease;
 }
@@ -196,7 +198,7 @@ body {
     padding: 3rem;
     position: relative;
     z-index: 10; /* コンテンツ層 - 最前面 */
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(26, 26, 26, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(243, 240, 233, 0.9) 100%);
 }
 
 .hero-text {
@@ -335,7 +337,7 @@ body {
 
 .title-sub {
     display: block;
-    color: var(--primary-gold);
+    color: var(--gold-accent);
     font-size: 0.8em;
     opacity: 0.9;
 }
@@ -350,7 +352,7 @@ body {
 .hero-motto {
     font-size: clamp(1.3rem, 2.8vw, 2.4rem); /* 1.6rem→1.3rem, 3.2vw→2.8vw, 2.8rem→2.4rem */
     font-weight: 300;
-    color: var(--primary-gold);
+    color: var(--gold-accent);
     margin-bottom: 1.5rem;
     opacity: 0;
     transform: translateX(-30px);
@@ -437,7 +439,7 @@ body {
 
 .cta-button.primary {
     background: var(--gradient-energy);
-    color: var(--text-white);
+    color: var(--text-black);
     box-shadow: var(--shadow-medium);
 }
 
@@ -448,14 +450,14 @@ body {
 
 .cta-button.secondary {
     background: rgba(255, 255, 255, 0.9);
-    color: var(--primary-gold);
-    border: 2px solid var(--primary-gold);
+    color: var(--gold-accent);
+    border: 2px solid var(--gold-accent);
     backdrop-filter: blur(10px);
 }
 
 .cta-button.secondary:hover {
-    background: var(--primary-gold); color: var(--primary-black);
-    color: var(--text-white);
+    background: var(--gold-accent); color: var(--primary-white);
+    color: var(--text-black);
     transform: translateY(-2px);
 }
 
@@ -478,7 +480,7 @@ body {
     opacity: 0;
     animation: scrollIndicatorIn 1s ease-out 3s forwards;
     z-index: 8; /* インジケーター層 */
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     padding: 1rem;
     border-radius: 0;
     backdrop-filter: blur(10px);
@@ -582,7 +584,7 @@ body {
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.98);
+        background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(20px);
         flex-direction: column;
         padding: 2rem;
@@ -762,7 +764,7 @@ body {
 /* Achievements Section */
 .achievements {
     padding: 5rem 0;
-    background: linear-gradient(135deg, var(--light-black) 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: linear-gradient(135deg, var(--light-gray-bg) 0%, rgba(255, 255, 255, 0.9) 100%);
     position: relative;
 }
 
@@ -773,7 +775,7 @@ body {
     left: 0;
     width: 100%;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+    background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
 }
 
 .achievement-grid {
@@ -794,7 +796,7 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 0;
-    background: var(--primary-gold); color: var(--primary-black);
+    background: var(--gold-accent); color: var(--primary-white);
     box-shadow: var(--shadow-medium);
     display: flex;
     align-items: center;
@@ -808,7 +810,7 @@ body {
     align-items: center;
     text-align: center;
     padding: 1rem;
-    color: var(--text-white);
+    color: var(--text-black);
 }
 
 .achievement-number {
@@ -825,13 +827,13 @@ body {
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.4;
-    color: var(--text-white);
+    color: var(--text-black);
 }
 
 /* Challenges Section */
 .challenges {
     padding: 6rem 0;
-    background: var(--primary-black);
+    background: var(--primary-white);
 }
 
 .challenges-grid {
@@ -882,7 +884,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem; /* 左右中央に配置 */
-    color: var(--text-white);
+    color: var(--text-black);
     font-size: 2rem;
     position: relative;
     z-index: 1;
@@ -891,7 +893,7 @@ body {
 .challenge-item h3 {
     font-size: 1.3rem;
     font-weight: 700;
-    color: var(--text-white);
+    color: var(--text-black);
     margin-bottom: 1rem;
     position: relative;
     z-index: 1;
@@ -899,7 +901,7 @@ body {
 }
 
 .challenge-item p {
-    color: var(--text-white);
+    color: var(--text-black);
     line-height: 1.6;
     position: relative;
     z-index: 1;
@@ -909,7 +911,7 @@ body {
 /* Solution Section */
 .solution {
     padding: 6rem 0;
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.03) 0%, var(--deep-black) 100%);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.03) 0%, var(--beige-bg) 100%);
 }
 
 .solution-content {
@@ -935,7 +937,7 @@ body {
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    background: rgba(26, 26, 26, 0.8);
+    background: rgba(243, 240, 233, 0.9);
     border-radius: 0;
     box-shadow: var(--shadow-soft);
     transition: all 0.3s ease;
@@ -950,7 +952,7 @@ body {
     width: 50px;
     height: 50px;
     background: var(--gradient-energy);
-    color: var(--text-white);
+    color: var(--text-black);
     border-radius: 0;
     display: flex;
     align-items: center;
@@ -985,7 +987,7 @@ body {
     box-shadow: var(--shadow-medium);
     transition: all 0.5s ease;
     cursor: pointer;
-    background: var(--primary-black);
+    background: var(--primary-white);
 }
 
 .visual-card:hover {
@@ -1037,7 +1039,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-white);
+    color: var(--text-black);
     font-weight: 700;
     font-size: 1.1rem;
     text-align: center;
@@ -1138,7 +1140,7 @@ body {
 }
 
 .service-card {
-    background: var(--primary-black);
+    background: var(--primary-white);
     padding: 2.5rem 2rem;
     border-radius: 0;
     box-shadow: var(--shadow-soft);
@@ -1176,7 +1178,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-white);
+    color: var(--text-black);
     font-size: 2rem;
     margin-bottom: 1.5rem;
     transition: all 0.3s ease;
@@ -1208,7 +1210,7 @@ body {
 
 .service-features span {
     background: rgba(44, 82, 130, 0.1);
-    color: var(--primary-gold);
+    color: var(--gold-accent);
     padding: 0.3rem 0.8rem;
     border-radius: 0;
     font-size: 0.85rem;
@@ -1222,7 +1224,7 @@ body {
     width: 40px;
     height: 40px;
     background: var(--gradient-energy);
-    color: var(--text-white);
+    color: var(--text-black);
     border: none;
     border-radius: 0;
     cursor: pointer;
@@ -1240,10 +1242,10 @@ body {
 /* CEO Section - Completely New Design */
 .ceo-section {
     padding: 8rem 0;
-    background: linear-gradient(135deg, var(--primary-gold) 0%, #1E40AF 50%, var(--primary-gold) 100%);
+    background: linear-gradient(135deg, var(--gold-accent) 0%, #1E40AF 50%, var(--gold-accent) 100%);
     position: relative;
     overflow: hidden;
-    color: var(--text-white);
+    color: var(--text-black);
 }
 
 .ceo-section::before {
@@ -1322,7 +1324,7 @@ body {
     top: 20px;
     right: 20px;
     background: var(--gradient-energy);
-    color: var(--text-white);
+    color: var(--text-black);
     padding: 0.5rem 1rem;
     border-radius: 0;
     font-size: 0.9rem;
@@ -1389,13 +1391,13 @@ body {
 .ceo-name-large {
     font-size: clamp(2rem, 3vw, 3rem);
     font-weight: 700;
-    color: var(--primary-gold);
+    color: var(--gold-accent);
     margin-bottom: 0.5rem;
 }
 
 .ceo-position {
     font-size: 1.2rem;
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 2rem;
 }
 
@@ -1414,7 +1416,7 @@ body {
     left: 0;
     top: -10px;
     font-size: 4rem;
-    color: var(--primary-gold);
+    color: var(--gold-accent);
     font-family: serif;
     opacity: 0.7;
 }
@@ -1449,18 +1451,18 @@ body {
 .mission-icon {
     width: 80px;
     height: 80px;
-    background: var(--primary-gold); color: var(--primary-black);
+    background: var(--gold-accent); color: var(--primary-white);
     border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
-    color: var(--text-white);
+    color: var(--text-black);
     font-size: 2rem;
 }
 
 .mission-card h3 {
-    color: var(--primary-gold);
+    color: var(--gold-accent);
     font-size: 1.2rem;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -1522,7 +1524,7 @@ body {
     width: 100%;
     height: 160px;
     object-fit: cover;
-    border-bottom: 3px solid var(--primary-gold);
+    border-bottom: 3px solid var(--gold-accent);
 }
 
 .result-info {
@@ -1533,7 +1535,7 @@ body {
 }
 
 .result-info h3 {
-    color: var(--primary-gold);
+    color: var(--gold-accent);
     font-size: 1.1rem;
     margin-bottom: 8px;
     font-weight: 700;
@@ -1549,7 +1551,7 @@ body {
 
 .result-achievement {
     background: var(--accent-orange);
-    color: var(--text-white);
+    color: var(--text-black);
     padding: 6px 12px;
     border-radius: 0;
     font-size: 0.85rem;
@@ -1574,7 +1576,7 @@ body {
     border-radius: 0;
     border: none;
     background: var(--gradient-energy);
-    color: var(--text-white);
+    color: var(--text-black);
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
@@ -1644,7 +1646,7 @@ body {
 }
 
 .testimonial-item {
-    background: var(--primary-black);
+    background: var(--primary-white);
     padding: 2.5rem 2rem;
     border-radius: 0;
     box-shadow: var(--shadow-soft);
@@ -1659,7 +1661,7 @@ body {
 
 .testimonial-content i {
     font-size: 2rem;
-    color: var(--primary-gold);
+    color: var(--gold-accent);
     margin-bottom: 1rem;
 }
 
@@ -1672,7 +1674,7 @@ body {
 }
 
 .testimonial-author {
-    color: var(--primary-gold);
+    color: var(--gold-accent);
     font-weight: 600;
     font-size: 0.95rem;
 }
@@ -1782,8 +1784,8 @@ body {
 /* CTA Section */
 .cta-section {
     padding: 6rem 0;
-    background: linear-gradient(135deg, var(--primary-gold) 0%, #3182CE 100%);
-    color: var(--text-white);
+    background: linear-gradient(135deg, var(--gold-accent) 0%, #3182CE 100%);
+    color: var(--text-black);
     position: relative;
     overflow: hidden;
 }
@@ -1799,7 +1801,7 @@ body {
     font-weight: 900;
     line-height: 1.3;
     margin-bottom: 2rem;
-    color: var(--text-white);
+    color: var(--text-black);
 }
 
 .cta-title .title-accent {
@@ -1882,8 +1884,8 @@ body {
 
 /* Footer */
 .footer {
-    background: var(--deep-black);
-    color: var(--text-white);
+    background: var(--beige-bg);
+    color: var(--text-black);
     padding: 4rem 0 2rem;
 }
 
@@ -1914,7 +1916,7 @@ body {
 
 .footer-section h4 {
     margin-bottom: 1rem;
-    color: var(--primary-gold);
+    color: var(--gold-accent);
     font-weight: 700;
 }
 
@@ -1927,18 +1929,18 @@ body {
 }
 
 .footer-section ul li a {
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: var(--primary-gold);
+    color: var(--gold-accent);
 }
 
 .footer-contact h4 {
     margin-bottom: 1rem;
-    color: var(--primary-gold);
+    color: var(--gold-accent);
     font-weight: 700;
 }
 
@@ -2058,7 +2060,7 @@ body {
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.98);
+        background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(20px);
         flex-direction: column;
         padding: 2rem;
@@ -2277,7 +2279,7 @@ body {
 /* お問い合わせフォーム */
 .contact-section {
   padding: 6rem 0;
-  background: var(--primary-black);
+  background: var(--primary-white);
 }
 
 .contact-form-container {
@@ -2302,7 +2304,7 @@ body {
 }
 
 .form-group label {
-  color: var(--primary-gold);
+  color: var(--gold-accent);
   font-weight: 600;
   font-size: 0.95rem;
 }
@@ -2324,13 +2326,13 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--primary-gold);
+  border-color: var(--gold-accent);
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
 .submit-button {
-  background: var(--primary-gold); color: var(--primary-black);
-  color: var(--text-white);
+  background: var(--gold-accent); color: var(--primary-white);
+  color: var(--text-black);
   padding: 1rem 2rem;
   border: none;
   border-radius: 0;
