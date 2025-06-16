@@ -796,7 +796,8 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 0;
-    background: var(--gold-accent); color: var(--primary-white);
+    background: var(--primary-white);
+    border: 2px solid var(--border-gray);
     box-shadow: var(--shadow-medium);
     display: flex;
     align-items: center;
@@ -817,10 +818,7 @@ body {
     font-size: 2.5rem;
     font-weight: 900;
     margin-bottom: 0.5rem;
-    background: var(--gradient-energy);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--gold-accent);
 }
 
 .achievement-text {
@@ -828,6 +826,7 @@ body {
     font-weight: 500;
     line-height: 1.4;
     color: var(--text-black);
+    opacity: 0.8;
 }
 
 /* Challenges Section */
