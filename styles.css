@@ -8,8 +8,8 @@
 :root {
     --primary-black: #000000;
     --primary-white: #FFFFFF;
-    --gold-accent: #8A6D00;
-    --light-gold: #BFA257;
+    --gold-accent: #B8860B;
+    --light-gold: #D4AF37;
     --beige-bg: #F3F0E9;
     --light-gray-bg: #F5F5F5;
     --border-gray: #E0E0E0;
@@ -1242,22 +1242,14 @@ body {
 /* CEO Section - Completely New Design */
 .ceo-section {
     padding: 8rem 0;
-    background: linear-gradient(135deg, var(--gold-accent) 0%, #1E40AF 50%, var(--gold-accent) 100%);
+    background: var(--light-gray-bg);
     position: relative;
     overflow: hidden;
     color: var(--text-black);
 }
 
 .ceo-section::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at 30% 70%, rgba(245, 101, 0, 0.1) 0%, transparent 50%);
-    animation: ceoBackgroundRotate 30s linear infinite;
-    pointer-events: none;
+    display: none;
 }
 
 @keyframes ceoBackgroundRotate {
@@ -1382,10 +1374,7 @@ body {
     font-size: clamp(2.5rem, 4vw, 4rem);
     font-weight: 900;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, white 0%, rgba(245, 101, 0, 0.9) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-black);
 }
 
 .ceo-name-large {
@@ -1397,7 +1386,7 @@ body {
 
 .ceo-position {
     font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--gold-accent);
     margin-bottom: 2rem;
 }
 
@@ -1784,7 +1773,7 @@ body {
 /* CTA Section */
 .cta-section {
     padding: 6rem 0;
-    background: linear-gradient(135deg, var(--gold-accent) 0%, #3182CE 100%);
+    background: var(--beige-bg);
     color: var(--text-black);
     position: relative;
     overflow: hidden;
@@ -1929,9 +1918,10 @@ body {
 }
 
 .footer-section ul li a {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-black);
     text-decoration: none;
     transition: color 0.3s ease;
+    opacity: 0.8;
 }
 
 .footer-section ul li a:hover {
@@ -1955,7 +1945,7 @@ body {
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--border-gray);
     opacity: 0.6;
 }
 
