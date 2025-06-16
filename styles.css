@@ -1467,10 +1467,9 @@ body {
 }
 
 .mission-card p {
-    color: #666;
-    font-size: 0.95rem;
+    color: var(--text-secondary);
     line-height: 1.6;
-    margin: 0;
+    font-size: 0.95rem;
 }
 
 /* Team Results Section - Enhanced Slider */
@@ -1479,8 +1478,6 @@ body {
     background: var(--gradient-primary);
     overflow: hidden;
 }
-
-
 
 /* お客様の声タイトル */
 .testimonials-title-section {
@@ -2265,4 +2262,123 @@ body {
   .client-logo {
     height: 40px;
   }
+}
+
+/* 社員紹介セクション */
+.team-members-section {
+    margin: 4rem 0;
+    padding: 3rem 0;
+    background: var(--light-gray-bg);
+    border-radius: 0;
+}
+
+.team-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.team-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--gold-accent);
+    border-radius: 0;
+}
+
+.team-members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background: var(--primary-color);
+    border-radius: 0;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.team-member:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.member-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--gold-accent);
+    position: relative;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover .member-image img {
+    transform: scale(1.1);
+}
+
+.member-info {
+    text-align: center;
+}
+
+.member-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--gold-accent);
+    margin-bottom: 1rem;
+}
+
+.member-comment {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .team-members-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .team-member {
+        padding: 1.5rem;
+    }
+    
+    .team-title {
+        font-size: 2rem;
+    }
+    
+    .member-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .member-name {
+        font-size: 1.2rem;
+    }
+    
+    .member-comment {
+        font-size: 0.9rem;
+    }
 } 
