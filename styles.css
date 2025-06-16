@@ -119,7 +119,7 @@ body {
 }
 
 .logo-image {
-    height: 60px;
+    height: 70px;
     width: auto;
     object-fit: contain;
 }
@@ -1736,7 +1736,7 @@ body {
 }
 
 .footer-logo-image {
-    height: 50px;
+    height: 70px;
     width: auto;
     object-fit: contain;
 }
